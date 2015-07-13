@@ -1,8 +1,7 @@
 /* Media
 ================================================== */
-
 /*	* CodeKit Import
-	* http://incident57.com/codekit/
+    * http://incident57.com/codekit/
 ================================================== */
 // @codekit-prepend "VMM.ExternalAPI.js";
 // @codekit-prepend "VMM.MediaElement.js";

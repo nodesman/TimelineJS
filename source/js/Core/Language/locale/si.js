@@ -1,4 +1,4 @@
-/* Sinhalese LANGUAGE 
+/* Sinhalese LANGUAGE
 ================================================== */
 typeof VMM != "undefined" && (VMM.Language = {
     lang: "si",

@@ -1,4 +1,4 @@
-/* Romanian LANGUAGE 
+/* Romanian LANGUAGE
 ================================================== */
 if(typeof VMM != 'undefined') {
     VMM.Language = {
@@ -11,7 +11,7 @@ if(typeof VMM != 'undefined') {
             month_abbr: ["Ian.", "Feb.", "Mar.", "Apr.", "Mai", "Iun.", "Iul.", "Aug.", "Sep.", "Oct.", "Noi.", "Dec."],
             day: ["Duminică","Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă"],
             day_abbr: ["Dum.","Luni", "Mar.", "Mie.", "Joi", "Vin.", "Sâm."]
-        }, 
+        },
         dateformats: {
             year: "yyyy",
             month_short: "mmm",

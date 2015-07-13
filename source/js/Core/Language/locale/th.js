@@ -1,4 +1,4 @@
-/* Thai LANGUAGE 
+/* Thai LANGUAGE
 ================================================== */
 if(typeof VMM != 'undefined') {
     VMM.Language = {
