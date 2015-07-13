@@ -1,6 +1,6 @@
 /* Esperanto LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "eo",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["januaro", "februaro", "marto", "aprilo", "majo", "junio", "julio", "aŭgusto", "septembro", "oktobro", "novembro", "decembro"],
             month_abbr: ["jan.", "feb.", "mar.", "apr.", "maj.", "jun.", "jul.", "aŭg.", "sep.", "okt.", "nov.", "dec."],
-            day: ["dimanĉo","lundo", "mardo", "merkredo", "ĵaŭdo", "vendredo", "sabato"],
-            day_abbr: ["dim.","lun.", "mar.", "mer.", "ĵaŭ.", "ven.", "sab."]
+            day: ["dimanĉo", "lundo", "mardo", "merkredo", "ĵaŭdo", "vendredo", "sabato"],
+            day_abbr: ["dim.", "lun.", "mar.", "mer.", "ĵaŭ.", "ven.", "sab."]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "El Vikipedio, la libera enciklopedio",
             loading_content: "Ŝarĝante enhavo",
             loading: "Ŝarĝante",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

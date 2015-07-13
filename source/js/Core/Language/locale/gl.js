@@ -1,6 +1,6 @@
 /* Galician LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "gl",
         api: {
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Dende Wikipedia, a enciclopedia libre",
             loading_content: "cargando",
             loading: "cargando",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

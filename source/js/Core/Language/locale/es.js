@@ -1,6 +1,6 @@
 /* Spanish LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "es",
         api: {
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Desde Wikipedia, la enciclopedia libre",
             loading_content: "cargando",
             loading: "cargando",
-            swipe_nav: "Desliza para ver"		}
+            swipe_nav: "Desliza para ver"
+        }
     }
 }

@@ -1,6 +1,6 @@
 /* DEFAULT LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined' && typeof VMM.Language == 'undefined') {
+if (typeof VMM != 'undefined' && typeof VMM.Language == 'undefined') {
     VMM.Language = {
         lang: "en",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined' && typeof VMM.Language == 'undefined') {
         date: {
             month: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
             month_abbr: ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."],
-            day: ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            day_abbr: ["Sun.","Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."]
+            day: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            day_abbr: ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."]
         },
         dateformats: {
             year: "yyyy",

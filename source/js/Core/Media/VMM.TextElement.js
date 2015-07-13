@@ -1,12 +1,12 @@
 /* TextElement
 ================================================== */
-if(typeof VMM != 'undefined' && typeof VMM.TextElement == 'undefined') {
-        VMM.TextElement = ({
-                init: function() {
+if (typeof VMM != 'undefined' && typeof VMM.TextElement == 'undefined') {
+    VMM.TextElement = ({
+        init: function() {
             return this;
         },
-                create: function(data) {
+        create: function(data) {
             return data;
         }
-            }).init();
+    }).init();
 }

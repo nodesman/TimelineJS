@@ -1,11 +1,11 @@
 /*	* Utilities and Useful Functions
 ================================================== */
-if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
-        VMM.Date = ({
-                init: function() {
+if (typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
+    VMM.Date = ({
+        init: function() {
             return this;
         },
-                dateformats: {
+        dateformats: {
             year: "yyyy",
             month_short: "mmm",
             month: "mmmm yyyy",
@@ -17,13 +17,13 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
             full_long: "mmm d',' yyyy 'at' hh:MM TT",
             full_long_small_date: "hh:MM TT'<br/><small>mmm d',' yyyy'</small>'"
         },
-                    month: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        month: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         month_abbr: ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."],
-        day: ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        day: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         day_abbr: ["Sun.", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."],
         hour: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         hour_suffix: ["am"],
-                    //B.C.
+        //B.C.
         bc_format: {
             year: "yyyy",
             month_short: "mmm",
@@ -35,40 +35,45 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
             full_long: "dddd',' mmm d',' yyyy 'at' hh:MM TT",
             full_long_small_date: "hh:MM TT'<br/><small>'dddd',' mmm d',' yyyy'</small>'"
         },
-                    setLanguage: function(lang) {
+        setLanguage: function(lang) {
             trace("SET DATE LANGUAGE");
-            VMM.Date.dateformats		=	lang.dateformats;
-            VMM.Date.month				=	lang.date.month;
-            VMM.Date.month_abbr			=	lang.date.month_abbr;
-            VMM.Date.day				=	lang.date.day;
-            VMM.Date.day_abbr			=	lang.date.day_abbr;
-            dateFormat.i18n.dayNames	=	lang.date.day_abbr.concat(lang.date.day);
-            dateFormat.i18n.monthNames	=	lang.date.month_abbr.concat(lang.date.month);
+            VMM.Date.dateformats = lang.dateformats;
+            VMM.Date.month = lang.date.month;
+            VMM.Date.month_abbr = lang.date.month_abbr;
+            VMM.Date.day = lang.date.day;
+            VMM.Date.day_abbr = lang.date.day_abbr;
+            dateFormat.i18n.dayNames = lang.date.day_abbr.concat(lang.date.day);
+            dateFormat.i18n.monthNames = lang.date.month_abbr.concat(lang.date.month);
         },
-                    parse: function(d, precision) {
+        parse: function(d, precision) {
             "use strict";
             var date,
                 date_array,
                 time_array,
                 time_parse,
                 p = {
-                    year: 			false,
-                    month: 			false,
-                    day: 			false,
-                    hour: 			false,
-                    minute: 		false,
-                    second: 		false,
-                    millisecond: 	false
+                    year: false,
+                    month: false,
+                    day: false,
+                    hour: false,
+                    minute: false,
+                    second: false,
+                    millisecond: false
                 };
-                            if (type.of(d) == "date") {
+            if (type.of(d) == "date") {
                 trace("DEBUG THIS, ITs A DATE");
                 date = d;
             } else {
                 date = new Date(0);
-                date.setMonth(0); date.setDate(1); date.setHours(0); date.setMinutes(0); date.setSeconds(0); date.setMilliseconds(0);
-                if ( d.match(/,/gi) ) {
+                date.setMonth(0);
+                date.setDate(1);
+                date.setHours(0);
+                date.setMinutes(0);
+                date.setSeconds(0);
+                date.setMilliseconds(0);
+                if (d.match(/,/gi)) {
                     date_array = d.split(",");
-                    for(var i = 0; i < date_array.length; i++) {
+                    for (var i = 0; i < date_array.length; i++) {
                         date_array[i] = parseInt(date_array[i], 10);
                     }
                     if (date_array[0]) {
@@ -105,10 +110,10 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                     }
                 } else if (d.match("/")) {
                     if (d.match(" ")) {
-                                                time_parse = d.split(" ");
+                        time_parse = d.split(" ");
                         if (d.match(":")) {
                             time_array = time_parse[1].split(":");
-                            if (time_array[0] >= 0 ) {
+                            if (time_array[0] >= 0) {
                                 date.setHours(time_array[0]);
                                 p.hour = true;
                             }
@@ -152,13 +157,13 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                     }
                 } else if (d.match("now")) {
                     var now = new Date();
-                                                        date.setFullYear(now.getFullYear());
+                    date.setFullYear(now.getFullYear());
                     p.year = true;
-                                        date.setMonth(now.getMonth());
+                    date.setMonth(now.getMonth());
                     p.month = true;
-                                        date.setDate(now.getDate());
+                    date.setDate(now.getDate());
                     p.day = true;
-                                        if (d.match("hours")) {
+                    if (d.match("hours")) {
                         date.setHours(now.getHours());
                         p.hour = true;
                     }
@@ -235,7 +240,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                             date.setDate(date_array[2]);
                             p.day = true;
                         }
-                                            } else {
+                    } else {
                         date = new Date(Date.parse(d));
                         p.year = true;
                         p.month = true;
@@ -251,11 +256,11 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                     }
                 } else {
                     date = new Date(
-                        parseInt(d.slice(0,4), 10),
-                        parseInt(d.slice(4,6), 10) - 1,
-                        parseInt(d.slice(6,8), 10),
-                        parseInt(d.slice(8,10), 10),
-                        parseInt(d.slice(10,12), 10)
+                        parseInt(d.slice(0, 4), 10),
+                        parseInt(d.slice(4, 6), 10) - 1,
+                        parseInt(d.slice(6, 8), 10),
+                        parseInt(d.slice(8, 10), 10),
+                        parseInt(d.slice(10, 12), 10)
                     );
                     p.year = true;
                     p.month = true;
@@ -268,18 +273,18 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                     if (date.getMilliseconds() >= 1) {
                         p.millisecond = true;
                     }
-                                    }
-                            }
-                        if (precision != null && precision != "") {
+                }
+            }
+            if (precision != null && precision != "") {
                 return {
-                    date: 		date,
-                    precision: 	p
+                    date: date,
+                    precision: p
                 };
             } else {
                 return date;
             }
         },
-                                    prettyDate: function(d, is_abbr, p, d2) {
+        prettyDate: function(d, is_abbr, p, d2) {
             var _date,
                 _date2,
                 format,
@@ -288,22 +293,22 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                 bc_original,
                 bc_number,
                 bc_string;
-                            if (d2 != null && d2 != "" && typeof d2 != 'undefined') {
+            if (d2 != null && d2 != "" && typeof d2 != 'undefined') {
                 is_pair = true;
                 trace("D2 " + d2);
             }
-                                    if (type.of(d) == "date") {
-                                if (type.of(p) == "object") {
+            if (type.of(d) == "date") {
+                if (type.of(p) == "object") {
                     if (p.millisecond || p.second && d.getSeconds() >= 1) {
                         // YEAR MONTH DAY HOUR MINUTE
-                        if (is_abbr){
+                        if (is_abbr) {
                             format = VMM.Date.dateformats.time_short;
                         } else {
                             format = VMM.Date.dateformats.time_short;
                         }
                     } else if (p.minute) {
                         // YEAR MONTH DAY HOUR MINUTE
-                        if (is_abbr){
+                        if (is_abbr) {
                             format = VMM.Date.dateformats.time_no_seconds_short;
                         } else {
                             format = VMM.Date.dateformats.time_no_seconds_small_date;
@@ -334,8 +339,8 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                     } else {
                         format = VMM.Date.dateformats.year;
                     }
-                                    } else {
-                                        if (d.getMonth() === 0 && d.getDate() == 1 && d.getHours() === 0 && d.getMinutes() === 0 ) {
+                } else {
+                    if (d.getMonth() === 0 && d.getDate() == 1 && d.getHours() === 0 && d.getMinutes() === 0) {
                         // YEAR ONLY
                         format = VMM.Date.dateformats.year;
                     } else if (d.getDate() <= 1 && d.getHours() === 0 && d.getMinutes() === 0) {
@@ -352,7 +357,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                         } else {
                             format = VMM.Date.dateformats.full;
                         }
-                    } else  if (d.getMinutes() === 0) {
+                    } else if (d.getMinutes() === 0) {
                         // YEAR MONTH DAY HOUR
                         if (is_abbr) {
                             format = VMM.Date.dateformats.time_no_seconds_short;
@@ -361,76 +366,76 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                         }
                     } else {
                         // YEAR MONTH DAY HOUR MINUTE
-                        if (is_abbr){
+                        if (is_abbr) {
                             format = VMM.Date.dateformats.time_no_seconds_short;
                         } else {
                             format = VMM.Date.dateformats.full_long;
                         }
                     }
                 }
-                                _date = dateFormat(d, format, false);
+                _date = dateFormat(d, format, false);
                 //_date = "Jan"
                 bc_check = _date.split(" ");
-                                    // BC TIME SUPPORT
-                for(var i = 0; i < bc_check.length; i++) {
-                    if ( parseInt(bc_check[i], 10) < 0 ) {
+                // BC TIME SUPPORT
+                for (var i = 0; i < bc_check.length; i++) {
+                    if (parseInt(bc_check[i], 10) < 0) {
                         trace("YEAR IS BC");
-                        bc_original	= bc_check[i];
-                        bc_number	= Math.abs( parseInt(bc_check[i], 10) );
-                        bc_string	= bc_number.toString() + " B.C.";
-                        _date		= _date.replace(bc_original, bc_string);
+                        bc_original = bc_check[i];
+                        bc_number = Math.abs(parseInt(bc_check[i], 10));
+                        bc_string = bc_number.toString() + " B.C.";
+                        _date = _date.replace(bc_original, bc_string);
                     }
                 }
-                                                        if (is_pair) {
+                if (is_pair) {
                     _date2 = dateFormat(d2, format, false);
                     bc_check = _date2.split(" ");
                     // BC TIME SUPPORT
-                    for(var j = 0; j < bc_check.length; j++) {
-                        if ( parseInt(bc_check[j], 10) < 0 ) {
+                    for (var j = 0; j < bc_check.length; j++) {
+                        if (parseInt(bc_check[j], 10) < 0) {
                             trace("YEAR IS BC");
-                            bc_original	= bc_check[j];
-                            bc_number	= Math.abs( parseInt(bc_check[j], 10) );
-                            bc_string	= bc_number.toString() + " B.C.";
-                            _date2			= _date2.replace(bc_original, bc_string);
+                            bc_original = bc_check[j];
+                            bc_number = Math.abs(parseInt(bc_check[j], 10));
+                            bc_string = bc_number.toString() + " B.C.";
+                            _date2 = _date2.replace(bc_original, bc_string);
                         }
                     }
-                                        }
+                }
             } else {
                 trace("NOT A VALID DATE?");
                 trace(d);
             }
-                            if (is_pair) {
+            if (is_pair) {
                 return _date + " &mdash; " + _date2;
             } else {
                 return _date;
             }
         }
-            }).init();
-        /*
-    * Date Format 1.2.3
-    * (c) 2007-2009 Steven Levithan <stevenlevithan.com>
-    * MIT license
-    *
-    * Includes enhancements by Scott Trenda <scott.trenda.net>
-    * and Kris Kowal <cixar.com/~kris.kowal/>
-    *
-    * Accepts a date, a mask, or a date and a mask.
-    * Returns a formatted version of the given date.
-    * The date defaults to the current date/time.
-    * The mask defaults to dateFormat.masks.default.
-    */
-    var dateFormat = function () {
-        var	token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[WLloSZ]|"[^"]*"|'[^']*'/g,
+    }).init();
+    /*
+     * Date Format 1.2.3
+     * (c) 2007-2009 Steven Levithan <stevenlevithan.com>
+     * MIT license
+     *
+     * Includes enhancements by Scott Trenda <scott.trenda.net>
+     * and Kris Kowal <cixar.com/~kris.kowal/>
+     *
+     * Accepts a date, a mask, or a date and a mask.
+     * Returns a formatted version of the given date.
+     * The date defaults to the current date/time.
+     * The mask defaults to dateFormat.masks.default.
+     */
+    var dateFormat = function() {
+        var token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[WLloSZ]|"[^"]*"|'[^']*'/g,
             timezone = /\b(?:[PMCEA][SDP]T|(?:Pacific|Mountain|Central|Eastern|Atlantic) (?:Standard|Daylight|Prevailing) Time|(?:GMT|UTC)(?:[-+]\d{4})?)\b/g,
             timezoneClip = /[^-+\dA-Z]/g,
-            pad = function (val, len) {
+            pad = function(val, len) {
                 val = String(val);
                 len = len || 2;
                 while (val.length < len) val = "0" + val;
                 return val;
             };
         // Regexes and supporting functions are cached through closure
-        return function (date, mask, utc) {
+        return function(date, mask, utc) {
             var dF = dateFormat;
             // You can't provide utc if you skip other args (use the "UTC:" mask prefix)
             if (arguments.length == 1 && Object.prototype.toString.call(date) == "[object String]" && !/\d/.test(date)) {
@@ -450,7 +455,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                 mask = mask.slice(4);
                 utc = true;
             }
-            var	_ = utc ? "getUTC" : "get",
+            var _ = utc ? "getUTC" : "get",
                 d = date[_ + "Date"](),
                 D = date[_ + "Day"](),
                 m = date[_ + "Month"](),
@@ -462,53 +467,53 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
                 W = date.getWeek(),
                 o = utc ? 0 : date.getTimezoneOffset(),
                 flags = {
-                    d:    d,
-                    dd:   pad(d),
-                    ddd:  dF.i18n.dayNames[D],
+                    d: d,
+                    dd: pad(d),
+                    ddd: dF.i18n.dayNames[D],
                     dddd: dF.i18n.dayNames[D + 7],
-                    m:    m + 1,
-                    mm:   pad(m + 1),
-                    mmm:  dF.i18n.monthNames[m],
+                    m: m + 1,
+                    mm: pad(m + 1),
+                    mmm: dF.i18n.monthNames[m],
                     mmmm: dF.i18n.monthNames[m + 12],
-                    yy:   String(y).slice(2),
+                    yy: String(y).slice(2),
                     yyyy: y,
-                    h:    H % 12 || 12,
-                    hh:   pad(H % 12 || 12),
-                    H:    H,
-                    HH:   pad(H),
-                    M:    M,
-                    MM:   pad(M),
-                    s:    s,
-                    ss:   pad(s),
-                    l:    pad(L, 3),
-                    L:    pad(L > 99 ? Math.round(L / 10) : L),
-                    t:    H < 12 ? "a"  : "p",
-                    tt:   H < 12 ? "am" : "pm",
-                    T:    H < 12 ? "A"  : "P",
-                    TT:   H < 12 ? "AM" : "PM",
-                    Z:    utc ? "UTC" : (String(date).match(timezone) || [""]).pop().replace(timezoneClip, ""),
-                    o:    (o > 0 ? "-" : "+") + pad(Math.floor(Math.abs(o) / 60) * 100 + Math.abs(o) % 60, 4),
-                    S:    ["th", "st", "nd", "rd"][d % 10 > 3 ? 0 : (d % 100 - d % 10 != 10) * d % 10],
-                    W: 	W
+                    h: H % 12 || 12,
+                    hh: pad(H % 12 || 12),
+                    H: H,
+                    HH: pad(H),
+                    M: M,
+                    MM: pad(M),
+                    s: s,
+                    ss: pad(s),
+                    l: pad(L, 3),
+                    L: pad(L > 99 ? Math.round(L / 10) : L),
+                    t: H < 12 ? "a" : "p",
+                    tt: H < 12 ? "am" : "pm",
+                    T: H < 12 ? "A" : "P",
+                    TT: H < 12 ? "AM" : "PM",
+                    Z: utc ? "UTC" : (String(date).match(timezone) || [""]).pop().replace(timezoneClip, ""),
+                    o: (o > 0 ? "-" : "+") + pad(Math.floor(Math.abs(o) / 60) * 100 + Math.abs(o) % 60, 4),
+                    S: ["th", "st", "nd", "rd"][d % 10 > 3 ? 0 : (d % 100 - d % 10 != 10) * d % 10],
+                    W: W
                 };
-            return mask.replace(token, function ($0) {
+            return mask.replace(token, function($0) {
                 return $0 in flags ? flags[$0] : $0.slice(1, $0.length - 1);
             });
         };
     }();
     // Some common format strings
     dateFormat.masks = {
-        "default":      "ddd mmm dd yyyy HH:MM:ss",
-        shortDate:      "m/d/yy",
-        mediumDate:     "mmm d, yyyy",
-        longDate:       "mmmm d, yyyy",
-        fullDate:       "dddd, mmmm d, yyyy",
-        shortTime:      "h:MM TT",
-        mediumTime:     "h:MM:ss TT",
-        longTime:       "h:MM:ss TT Z",
-        isoDate:        "yyyy-mm-dd",
-        isoTime:        "HH:MM:ss",
-        isoDateTime:    "yyyy-mm-dd'T'HH:MM:ss",
+        "default": "ddd mmm dd yyyy HH:MM:ss",
+        shortDate: "m/d/yy",
+        mediumDate: "mmm d, yyyy",
+        longDate: "mmmm d, yyyy",
+        fullDate: "dddd, mmmm d, yyyy",
+        shortTime: "h:MM TT",
+        mediumTime: "h:MM:ss TT",
+        longTime: "h:MM:ss TT Z",
+        isoDate: "yyyy-mm-dd",
+        isoTime: "HH:MM:ss",
+        isoDateTime: "yyyy-mm-dd'T'HH:MM:ss",
         isoUtcDateTime: "UTC:yyyy-mm-dd'T'HH:MM:ss'Z'"
     };
     // Internationalization strings
@@ -523,7 +528,7 @@ if(typeof VMM != 'undefined' && typeof VMM.Date == 'undefined') {
         ]
     };
     // For convenience...
-    Date.prototype.format = function (mask, utc) {
+    Date.prototype.format = function(mask, utc) {
         return dateFormat(this, mask, utc);
     };
-    }
+}

@@ -1,6 +1,6 @@
 /* Swedish LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "sv",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"],
             month_abbr: ["jan", "febr", "mars", "april", "maj", "juni", "juli", "aug", "sept", "okt", "nov", "dec"],
-            day: ["söndag","måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag"],
-            day_abbr: ["sön","mån", "tis", "ons", "tors", "fre", "lör"]
+            day: ["söndag", "måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag"],
+            day_abbr: ["sön", "mån", "tis", "ons", "tors", "fre", "lör"]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Från Wikipedia, den fria encyklopedin",
             loading_content: "Laddar innehåll",
             loading: "Laddar",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

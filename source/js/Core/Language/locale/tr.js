@@ -1,6 +1,6 @@
 /* Turkish LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "tr",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
             month_abbr: ["Oca.", "Şub.", "Mar.", "Nis.", "May.", "Haz.", "Tem.", "Ağu.", "Eyl.", "Eki.", "Kas.", "Ara."],
-            day: ["Pazar","Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"],
-            day_abbr: ["Paz.","Pzt.", "Sal.", "Çar.", "Per.", "Cum.", "Cts."]
+            day: ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"],
+            day_abbr: ["Paz.", "Pzt.", "Sal.", "Çar.", "Per.", "Cum.", "Cts."]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Wikipedia'dan, özgür ansiklopedi",
             loading_content: "İçerik Yükleniyor",
             loading: "Yükleniyor",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

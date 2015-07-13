@@ -32,6 +32,7 @@ if (typeof VMM != 'undefined') {
             wikipedia: "출처: 위키피디아, 우리 모두의 백과사전",
             loading_content: "내용을 불러오고 있습니다.",
             loading: "불러오는중",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

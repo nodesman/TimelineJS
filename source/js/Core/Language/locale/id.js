@@ -1,6 +1,6 @@
 /* Indonesian LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "id",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"],
             month_abbr: ["Jan.", "Feb.", "Maret", "April", "Mei", "Juni", "July", "Agus.", "Sept.", "Okt.", "Nov.", "Des."],
-            day: ["Ahad","Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"],
-            day_abbr: ["Ahad","Sen.", "Sel.", "Rabu", "Kamis", "Jum.", "Sab."]
+            day: ["Ahad", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"],
+            day_abbr: ["Ahad", "Sen.", "Sel.", "Rabu", "Kamis", "Jum.", "Sab."]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "dari Wikipedia, ensiklopedia bebas",
             loading_content: "Memuat Isi",
             loading: "Memuat",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

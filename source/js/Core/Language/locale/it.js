@@ -1,16 +1,16 @@
 /* Italian LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "it",
         api: {
             wikipedia: "it"
         },
         date: {
-            month: ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"],
-            month_abbr: ["Gen","Feb","Mar","Apr","Mag","Giu","Lug","Ago","Set","Ott","Nov","Dic"],
-            day: ["Domenica","Lunedí","Martedí","Mercoledí","Giovedí","Venerdí","Sabato"],
-            day_abbr: ["Dom.","Lun.","Mar.","Mer.","Gio.","Ven.","Sab."]
+            month: ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"],
+            month_abbr: ["Gen", "Feb", "Mar", "Apr", "Mag", "Giu", "Lug", "Ago", "Set", "Ott", "Nov", "Dic"],
+            day: ["Domenica", "Lunedí", "Martedí", "Mercoledí", "Giovedí", "Venerdí", "Sabato"],
+            day_abbr: ["Dom.", "Lun.", "Mar.", "Mer.", "Gio.", "Ven.", "Sab."]
         },
         dateformats: {
             year: "yyyy",

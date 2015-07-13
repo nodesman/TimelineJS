@@ -1,6 +1,6 @@
 /* Afrikaans LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "af",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["Januarie", "Februarie", "Maart", "April", "Mei", "Junie", "Julie", "Augustus", "September", "Oktober", "November", "Desember"],
             month_abbr: ["Jan.", "Feb.", "Maart", "April", "Mei", "Junei", "Julie", "Aug.", "Sept.", "Okt.", "Nov.", "Des."],
-            day: ["Sondag","Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrydag", "Saterdag"],
-            day_abbr: ["Son.","Maan.", "Dins.", "Woen.", "Don.", "Vry.", "Sat."]
+            day: ["Sondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrydag", "Saterdag"],
+            day_abbr: ["Son.", "Maan.", "Dins.", "Woen.", "Don.", "Vry.", "Sat."]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Van Wikipedia, die gratis ensiklopedie",
             loading_content: "Die inhoud laai",
             loading: "Aan't laai",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

@@ -32,6 +32,7 @@ if (typeof VMM != 'undefined') {
             wikipedia: "Wikipedia entziklopedia libretik",
             loading_content: "Edukia kargatzen",
             loading: "Kargatzen",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

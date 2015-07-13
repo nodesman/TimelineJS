@@ -1,6 +1,6 @@
 /* Polish LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "pl",
         api: {
@@ -24,7 +24,7 @@ if(typeof VMM != 'undefined') {
             full_long: "dddd',' d mmm yyyy 'um' HH:MM",
             full_long_small_date: "HH:MM'<br/><small>'dddd',' d mmm yyyy'</small>'"
         },
-        messages:{
+        messages: {
             loading_timeline: "Ładowanie osi czasu... ",
             return_to_title: "Wróć do tytułu",
             expand_timeline: "Powiększ oś czasu",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Z Wikipedii, wolnej encyklopedii",
             loading_content: "Ładowanie zawartości",
             loading: "Ładowanie",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

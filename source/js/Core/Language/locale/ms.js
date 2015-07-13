@@ -1,6 +1,6 @@
 /* Malay LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "ms",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["Januari", "Februari", "Mac", "April", "Mei", "Jun", "Julai", "Ogos", "September", "Oktober", "November", "Disember"],
             month_abbr: ["Jan.", "Feb.", "Mac", "Apr", "Mei", "Jun", "Jul", "Ogos.", "Sept.", "Okt.", "Nov.", "Dis."],
-            day: ["Ahad","Isnin", "Selasa", "Rabu", "Khamis", "Jumaat", "Sabtu"],
-            day_abbr: ["Ahd.","Isn.", "Sel.", "Rab.", "Kha.", "Jum.", "Sab."]
+            day: ["Ahad", "Isnin", "Selasa", "Rabu", "Khamis", "Jumaat", "Sabtu"],
+            day_abbr: ["Ahd.", "Isn.", "Sel.", "Rab.", "Kha.", "Jum.", "Sab."]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Daripada Wikipedia, ensiklopedia bebas.",
             loading_content: "Memuat Kandungan",
             loading: "Memuat",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

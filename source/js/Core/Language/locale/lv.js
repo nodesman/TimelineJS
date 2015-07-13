@@ -1,6 +1,6 @@
 /* Latvian LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "lv",
         api: {
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "No Wikipedia, brīvās enciklopēdijas",
             loading_content: "Ielādējas saturs",
             loading: "Ielādējas",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

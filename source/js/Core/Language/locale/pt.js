@@ -1,6 +1,6 @@
 /* Portuguese LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "pt",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
             month_abbr: ["Jan", "Fev", "Mar", "Abr", "Maio", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
-            day: ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"],
-            day_abbr: ["Dom","Seg", "Ter", "Qua", "Qui", "Sex", "Sab"]
+            day: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado"],
+            day_abbr: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Wikipedia, A enciclopedia Livre.",
             loading_content: "A carregar o conteúdo",
             loading: "A carregar",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

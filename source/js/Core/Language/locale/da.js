@@ -1,6 +1,6 @@
 /* Danish LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "da",
         api: {
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Fra Wikipedia",
             loading_content: "Henter indhold",
             loading: "Henter",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

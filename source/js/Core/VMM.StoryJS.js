@@ -10,13 +10,12 @@
 // @codekit-prepend "Slider/VMM.Slider.js";
 // @codekit-prepend "Library/AES.js";
 // @codekit-prepend "Library/bootstrap-tooltip.js";
-if(typeof VMM != 'undefined' && typeof VMM.StoryJS == 'undefined') {
-        VMM.StoryJS = function() {
-                /* PRIVATE VARS
+if (typeof VMM != 'undefined' && typeof VMM.StoryJS == 'undefined') {
+    VMM.StoryJS = function() {
+        /* PRIVATE VARS
         ================================================== */
-                /* PUBLIC FUNCTIONS
+        /* PUBLIC FUNCTIONS
         ================================================== */
-        this.init = function(d) {
-                    };
-            }
+        this.init = function(d) {};
+    }
 }

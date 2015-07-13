@@ -1,6 +1,6 @@
 /* Brazilian Portuguese LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "pt-br",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
             month_abbr: ["Jan.", "Fev.", "Mar.", "Abr.", "Mai.", "Jun.", "Jul.", "Ago.", "Set.", "Out.", "Nov.", "Dez."],
-            day: ["Domingo","Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
-            day_abbr: ["Dom.","Seg.", "Ter.", "Qua.", "Qui.", "Sex.", "Sáb."]
+            day: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
+            day_abbr: ["Dom.", "Seg.", "Ter.", "Qua.", "Qui.", "Sex.", "Sáb."]
         },
         dateformats: {
             year: "yyyy",

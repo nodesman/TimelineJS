@@ -1,6 +1,6 @@
 /* Czech LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "cz",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["ledna", "února", "března", "dubna", "května", "června", "července", "srpna", "září", "října", "listopadu", "prosince"],
             month_abbr: ["Led", "Úno", "Bře", "Dub", "Kvě", "Čen", "Čec", "Srp", "Zář", "Říj", "Lis", "Pro"],
-            day: ["neděle","pondělí", "úterý", "středa", "čtvrtek", "pátek", "sobota"],
-            day_abbr: ["Ne","Po", "Út", "St", "Čt", "Pá", "So"]
+            day: ["neděle", "pondělí", "úterý", "středa", "čtvrtek", "pátek", "sobota"],
+            day_abbr: ["Ne", "Po", "Út", "St", "Čt", "Pá", "So"]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Zdroj: otevřená encyklopedie Wikipedia",
             loading_content: "Nahrávám obsah",
             loading: "Nahrávám",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

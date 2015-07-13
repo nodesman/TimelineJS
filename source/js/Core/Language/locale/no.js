@@ -1,6 +1,6 @@
 /* Norwegian LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "no",
         api: {
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Fra Wikipedia, den frie encyklopedi",
             loading_content: "Laster innhold",
             loading: "Laster",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

@@ -1,66 +1,66 @@
 /* DRAG SLIDER
 ================================================== */
-if(typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
+if (typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
     VMM.DragSlider = function() {
         var drag = {
-            element:		"",
-            element_move:	"",
-            constraint:		"",
-            sliding:		false,
-            pagex: {
-                start:		0,
-                end:		0
+                element: "",
+                element_move: "",
+                constraint: "",
+                sliding: false,
+                pagex: {
+                    start: 0,
+                    end: 0
+                },
+                pagey: {
+                    start: 0,
+                    end: 0
+                },
+                left: {
+                    start: 0,
+                    end: 0
+                },
+                time: {
+                    start: 0,
+                    end: 0
+                },
+                touch: false,
+                ease: "easeOutExpo"
             },
-            pagey: {
-                start:		0,
-                end:		0
+            dragevent = {
+                down: "mousedown",
+                up: "mouseup",
+                leave: "mouseleave",
+                move: "mousemove"
             },
-            left: {
-                start:		0,
-                end:		0
+            mousedrag = {
+                down: "mousedown",
+                up: "mouseup",
+                leave: "mouseleave",
+                move: "mousemove"
             },
-            time: {
-                start:		0,
-                end:		0
+            touchdrag = {
+                down: "touchstart",
+                up: "touchend",
+                leave: "mouseleave",
+                move: "touchmove"
             },
-            touch:			false,
-            ease:			"easeOutExpo"
-        },
-        dragevent = {
-            down:		"mousedown",
-            up:			"mouseup",
-            leave:		"mouseleave",
-            move:		"mousemove"
-        },
-        mousedrag = {
-            down:		"mousedown",
-            up:			"mouseup",
-            leave:		"mouseleave",
-            move:		"mousemove"
-        },
-        touchdrag = {
-            down:		"touchstart",
-            up:			"touchend",
-            leave:		"mouseleave",
-            move:		"touchmove"
-        },
-        dragslider		= this,
-        is_sticky		= false;
-                /* PUBLIC FUNCTIONS
+            dragslider = this,
+            is_sticky = false;
+        /* PUBLIC FUNCTIONS
         ================================================== */
         this.createPanel = function(drag_object, move_object, constraint, touch, sticky) {
-            drag.element		= drag_object;
-            drag.element_move	= move_object;
+            drag.element = drag_object;
+            drag.element_move = move_object;
             //dragslider			= drag_object;
-            if ( sticky != null && sticky != "") {
+            if (sticky != null && sticky != "") {
                 is_sticky = sticky;
             }
-            if ( constraint != null && constraint != "") {
+            if (constraint != null && constraint != "") {
                 drag.constraint = constraint;
             } else {
                 drag.constraint = false;
             }
-            if ( touch) {
+            if (touch) {
                 drag.touch = touch;
             } else {
                 drag.touch = false;
@@ -71,24 +71,34 @@ if(typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
             } else {
                 dragevent = mousedrag;
             }
-                        makeDraggable(drag.element, drag.element_move);
+            makeDraggable(drag.element, drag.element_move);
         }
-                this.updateConstraint = function(constraint) {
+        this.updateConstraint = function(constraint) {
             trace("updateConstraint");
             drag.constraint = constraint;
         }
-                this.cancelSlide = function(e) {
-            VMM.unbindEvent(drag.element, onDragMove, dragevent.move);
-            return true;
-        }
-                /* PRIVATE FUNCTIONS
+        this.cancelSlide = function(e) {
+                VMM.unbindEvent(drag.element, onDragMove, dragevent.move);
+                return true;
+            }
+            /* PRIVATE FUNCTIONS
         ================================================== */
         function makeDraggable(drag_object, move_object) {
-                        VMM.bindEvent(drag_object, onDragStart, dragevent.down, {element: move_object, delement: drag_object});
-            VMM.bindEvent(drag_object, onDragEnd, dragevent.up, {element: move_object, delement: drag_object});
-            VMM.bindEvent(drag_object, onDragLeave, dragevent.leave, {element: move_object, delement: drag_object});
-                    }
-                function onDragLeave(e) {
+            VMM.bindEvent(drag_object, onDragStart, dragevent.down, {
+                element: move_object,
+                delement: drag_object
+            });
+            VMM.bindEvent(drag_object, onDragEnd, dragevent.up, {
+                element: move_object,
+                delement: drag_object
+            });
+            VMM.bindEvent(drag_object, onDragLeave, dragevent.leave, {
+                element: move_object,
+                delement: drag_object
+            });
+        }
+
+        function onDragLeave(e) {
             VMM.unbindEvent(e.data.delement, onDragMove, dragevent.move);
             if (!drag.touch) {
                 e.preventDefault();
@@ -102,7 +112,8 @@ if(typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
                 return true;
             }
         }
-                function onDragStart(e) {
+
+        function onDragStart(e) {
             dragStart(e.data.element, e.data.delement, e);
             if (!drag.touch) {
                 e.preventDefault();
@@ -110,7 +121,8 @@ if(typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
             //e.stopPropagation();
             return true;
         }
-                function onDragEnd(e) {
+
+        function onDragEnd(e) {
             if (!drag.touch) {
                 e.preventDefault();
             }
@@ -123,10 +135,12 @@ if(typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
                 return true;
             }
         }
-                function onDragMove(e) {
+
+        function onDragMove(e) {
             dragMove(e.data.element, e);
-                    }
-                function dragStart(elem, delem, e) {
+        }
+
+        function dragStart(elem, delem, e) {
             if (drag.touch) {
                 trace("IS TOUCH")
                 VMM.Lib.css(elem, '-webkit-transition-duration', '0');
@@ -138,14 +152,18 @@ if(typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
             }
             drag.left.start = getLeft(elem);
             drag.time.start = new Date().getTime();
-                        VMM.Lib.stop(elem);
-            VMM.bindEvent(delem, onDragMove, dragevent.move, {element: elem});
+            VMM.Lib.stop(elem);
+            VMM.bindEvent(delem, onDragMove, dragevent.move, {
+                element: elem
+            });
         }
-                function dragEnd(elem, delem, e) {
+
+        function dragEnd(elem, delem, e) {
             VMM.unbindEvent(delem, onDragMove, dragevent.move);
             dragMomentum(elem, e);
         }
-                function dragMove(elem, e) {
+
+        function dragMove(elem, e) {
             var drag_to, drag_to_y;
             drag.sliding = true;
             if (drag.touch) {
@@ -155,9 +173,9 @@ if(typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
                 drag.pagex.end = e.pageX;
                 drag.pagey.end = e.pageY;
             }
-                        drag.left.end	= getLeft(elem);
-            drag_to			= -(drag.pagex.start - drag.pagex.end - drag.left.start);
-                                    if (Math.abs(drag.pagey.start) - Math.abs(drag.pagey.end) > 10) {
+            drag.left.end = getLeft(elem);
+            drag_to = -(drag.pagex.start - drag.pagex.end - drag.left.start);
+            if (Math.abs(drag.pagey.start) - Math.abs(drag.pagey.end) > 10) {
                 trace("SCROLLING Y")
                 trace(Math.abs(drag.pagey.start) - Math.abs(drag.pagey.end));
             }
@@ -167,24 +185,25 @@ if(typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
                 e.stopPropagation();
             }
         }
-                function dragMomentum(elem, e) {
+
+        function dragMomentum(elem, e) {
             var drag_info = {
-                    left:			drag.left.end,
-                    left_adjust:	0,
+                    left: drag.left.end,
+                    left_adjust: 0,
                     change: {
-                        x:			0
+                        x: 0
                     },
-                    time:			(new Date().getTime() - drag.time.start) * 10,
-                    time_adjust:	(new Date().getTime() - drag.time.start) * 10
+                    time: (new Date().getTime() - drag.time.start) * 10,
+                    time_adjust: (new Date().getTime() - drag.time.start) * 10
                 },
                 multiplier = 3000;
-                            if (drag.touch) {
+            if (drag.touch) {
                 multiplier = 6000;
             }
-                        drag_info.change.x = multiplier * (Math.abs(drag.pagex.end) - Math.abs(drag.pagex.start));
-                                    drag_info.left_adjust = Math.round(drag_info.change.x / drag_info.time);
-                        drag_info.left = Math.min(drag_info.left + drag_info.left_adjust);
-                        if (drag.constraint) {
+            drag_info.change.x = multiplier * (Math.abs(drag.pagex.end) - Math.abs(drag.pagex.start));
+            drag_info.left_adjust = Math.round(drag_info.change.x / drag_info.time);
+            drag_info.left = Math.min(drag_info.left + drag_info.left_adjust);
+            if (drag.constraint) {
                 if (drag_info.left > drag.constraint.left) {
                     drag_info.left = drag.constraint.left;
                     if (drag_info.time > 5000) {
@@ -197,19 +216,24 @@ if(typeof VMM != 'undefined' && typeof VMM.DragSlider == 'undefined') {
                     }
                 }
             }
-                        VMM.fireEvent(dragslider, "DRAGUPDATE", [drag_info]);
-                        if (!is_sticky) {
+            VMM.fireEvent(dragslider, "DRAGUPDATE", [drag_info]);
+            if (!is_sticky) {
                 if (drag_info.time > 0) {
                     if (drag.touch) {
-                        VMM.Lib.animate(elem, drag_info.time, "easeOutCirc", {"left": drag_info.left});
+                        VMM.Lib.animate(elem, drag_info.time, "easeOutCirc", {
+                            "left": drag_info.left
+                        });
                     } else {
-                        VMM.Lib.animate(elem, drag_info.time, drag.ease, {"left": drag_info.left});
+                        VMM.Lib.animate(elem, drag_info.time, drag.ease, {
+                            "left": drag_info.left
+                        });
                     }
                 }
             }
         }
-                function getLeft(elem) {
+
+        function getLeft(elem) {
             return parseInt(VMM.Lib.css(elem, 'left').substring(0, VMM.Lib.css(elem, 'left').length - 2), 10);
         }
-            }
+    }
 }

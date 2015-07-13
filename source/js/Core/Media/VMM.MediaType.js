@@ -4,20 +4,20 @@
     the id is a key piece of information needed to make
     the request of the api.
 ================================================== */
-if(typeof VMM != 'undefined' && typeof VMM.MediaType == 'undefined') {
-        VMM.MediaType = function(_d) {
-        var d		= _d.replace(/^\s\s*/, '').replace(/\s\s*$/, ''),
-            success	= false,
-            media	= {
-                type:		"unknown",
-                id:			"",
-                start:		0,
-                hd:			false,
-                link:		"",
-                lang:		VMM.Language.lang,
-                uniqueid:	VMM.Util.unique_ID(6)
+if (typeof VMM != 'undefined' && typeof VMM.MediaType == 'undefined') {
+    VMM.MediaType = function(_d) {
+        var d = _d.replace(/^\s\s*/, '').replace(/\s\s*$/, ''),
+            success = false,
+            media = {
+                type: "unknown",
+                id: "",
+                start: 0,
+                hd: false,
+                link: "",
+                lang: VMM.Language.lang,
+                uniqueid: VMM.Util.unique_ID(6)
             };
-                if (d.match("div class='twitter'")) {
+        if (d.match("div class='twitter'")) {
             media.type = "twitter-ready";
             media.id = d;
             success = true;
@@ -33,21 +33,21 @@ if(typeof VMM != 'undefined' && typeof VMM.MediaType == 'undefined') {
             if (group) {
                 media.id = group[1];
             }
-            trace( "iframe url: " + media.id );
+            trace("iframe url: " + media.id);
             success = Boolean(media.id);
         } else if (d.match('(www.)?youtube|youtu\.be')) {
             if (d.match('v=')) {
-                media.id	= VMM.Util.getUrlVars(d)["v"];
+                media.id = VMM.Util.getUrlVars(d)["v"];
             } else if (d.match('\/embed\/')) {
                 // TODO Issue #618 better splitting
-                media.id	= d.split("embed\/")[1].split(/[?&]/)[0];
-            } else if (d.match(/v\/|v=|youtu\.be\//)){
-                media.id	= d.split(/v\/|v=|youtu\.be\//)[1].split(/[?&]/)[0];
+                media.id = d.split("embed\/")[1].split(/[?&]/)[0];
+            } else if (d.match(/v\/|v=|youtu\.be\//)) {
+                media.id = d.split(/v\/|v=|youtu\.be\//)[1].split(/[?&]/)[0];
             } else {
                 trace("YOUTUBE IN URL BUT NOT A VALID VIDEO");
             }
-            media.start	= VMM.Util.getUrlVars(d)["t"];
-            media.hd	= VMM.Util.getUrlVars(d)["hd"];
+            media.start = VMM.Util.getUrlVars(d)["t"];
+            media.hd = VMM.Util.getUrlVars(d)["hd"];
             media.type = "youtube";
             success = true;
         } else if (d.match('(player.)?vimeo\.com')) {
@@ -72,7 +72,7 @@ if(typeof VMM != 'undefined' && typeof VMM.MediaType == 'undefined') {
             media.type = "soundcloud";
             media.id = d;
             success = true;
-        } else if (d.match('(www.)?twitter\.com') && d.match('status') ) {
+        } else if (d.match('(www.)?twitter\.com') && d.match('status')) {
             if (d.match("status\/")) {
                 media.id = d.split("status\/")[1];
             } else if (d.match("statuses\/")) {
@@ -112,10 +112,10 @@ if(typeof VMM != 'undefined' && typeof VMM.MediaType == 'undefined') {
             media.id = VMM.ExternalAPI.instagram.getInstagramIdFromUrl(d)
             success = Boolean(media.id);
         } else if (d.match(/jpg|jpeg|png|gif|svg|bmp/i) ||
-                d.match("staticmap") ||
-                d.match("yfrog.com") ||
-                d.match("twitpic.com") ||
-                d.match('maps.googleapis.com/maps/api/streetview')) {
+            d.match("staticmap") ||
+            d.match("yfrog.com") ||
+            d.match("twitpic.com") ||
+            d.match('maps.googleapis.com/maps/api/streetview')) {
             media.type = "image";
             media.id = d;
             success = true;
@@ -145,7 +145,7 @@ if(typeof VMM != 'undefined' && typeof VMM.MediaType == 'undefined') {
             media.id = d;
             success = true;
         }
-                if (success) {
+        if (success) {
             return media;
         } else {
             trace("No valid media id detected");

@@ -1,6 +1,6 @@
 /* Hungarian LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "hu",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["január", "február", "március", "április", "május", "június", "július", "augusztus", "szeptember", "október", "november", "december"],
             month_abbr: ["jan.", "febr.", "márc.", "ápr.", "máj.", "jún.", "júl.", "aug.", "szept.", "okt.", "nov.", "dec."],
-            day: ["vasárnap","hétfő", "kedd", "szerda", "csütörtök", "péntek", "szombat"],
-            day_abbr: ["vas.","hétfő", "kedd", "szer.", "csüt.", "pén.", "szom."]
+            day: ["vasárnap", "hétfő", "kedd", "szerda", "csütörtök", "péntek", "szombat"],
+            day_abbr: ["vas.", "hétfő", "kedd", "szer.", "csüt.", "pén.", "szom."]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "A Wikipédiából, a szabad enciklopédiából",
             loading_content: "Tartalom betöltése",
             loading: "Betöltés",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

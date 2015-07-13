@@ -1,6 +1,6 @@
 /* Icelandic LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "is",
         api: {
@@ -10,7 +10,7 @@ if(typeof VMM != 'undefined') {
             month: ["janúar", "febrúar", "mars", "apríl", "maí", "júní", "júlí", "ágúst", "september", "október", "nóvember", "desember"],
             month_abbr: ["jan.", "feb.", "mars", "apríl", "maí", "júní", "júlí", "ágúst", "sept.", "okt.", "nóv.", "des."],
             day: ["sunnudagur", "mánudagur", "þriðjudagur", "miðvikudagur", "fimmtudagur", "föstudagur", "laugardagur"],
-            day_abbr: ["sun.","mán.", "þri.", "mið.", "fim.", "fös.", "lau."]
+            day_abbr: ["sun.", "mán.", "þri.", "mið.", "fim.", "fös.", "lau."]
         },
         dateformats: {
             year: "yyyy",

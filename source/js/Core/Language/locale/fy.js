@@ -1,6 +1,6 @@
 /* Frisian LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "fy",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["Jannewaris", "Febrewaris", "Maart", "April", "Maaie", "Juny", "July", "Augustus", "Septimber", "Oktober", "Novimber", "Desimber"],
             month_abbr: ["Jan.", "Feb.", "Mar", "Apr", "Maaie", "July", "July", "Aug.", "Sept.", "Okt.", "Nov.", "Des."],
-            day: ["Snein","Moandei", "Tiisdei", "Woansdei", "Tongersdei", "Freed", "Sneon"],
-            day_abbr: ["Snein","Moandei", "Tiisdei", "Woansdei", "Tongersdei", "Freed", "Sneon"]
+            day: ["Snein", "Moandei", "Tiisdei", "Woansdei", "Tongersdei", "Freed", "Sneon"],
+            day_abbr: ["Snein", "Moandei", "Tiisdei", "Woansdei", "Tongersdei", "Freed", "Sneon"]
         },
         dateformats: {
             year: "yyyy",

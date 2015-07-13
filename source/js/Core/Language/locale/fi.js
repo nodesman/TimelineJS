@@ -1,6 +1,6 @@
 /* Finnish LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "fi",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["tammikuuta", "helmikuuta", "maaliskuuta", "huhtikuuta", "toukokuuta", "kesäkuuta", "heinäkuuta", "elokuuta", "syyskuuta", "lokakuuta", "marraskuuta", "joulukuuta"],
             month_abbr: ["tammi", "helmi", "maalis", "huhti", "touko", "kesä", "heinä", "elo", "syys", "loka", "marras", "joulu"],
-            day: ["sunnuntai","maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauauntai"],
-            day_abbr: ["su","ma", "ti", "ke", "to", "pe", "la"]
+            day: ["sunnuntai", "maanantai", "tiistai", "keskiviikko", "torstai", "perjantai", "lauauntai"],
+            day_abbr: ["su", "ma", "ti", "ke", "to", "pe", "la"]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Wikipediasta",
             loading_content: "Ladataan sisältöä",
             loading: "Ladataan",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

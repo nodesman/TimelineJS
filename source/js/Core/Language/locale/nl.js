@@ -1,6 +1,6 @@
 /* Dutch LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "nl",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"],
             month_abbr: ["jan", "febr", "maa", "apr", "mei", "juni", "juli", "aug", "sept", "okt", "nov", "dec"],
-            day: ["zondag","maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"],
-            day_abbr: ["zo","ma", "di", "wo", "do", "vr", "za"]
+            day: ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"],
+            day_abbr: ["zo", "ma", "di", "wo", "do", "vr", "za"]
         },
         dateformats: {
             year: "yyyy",

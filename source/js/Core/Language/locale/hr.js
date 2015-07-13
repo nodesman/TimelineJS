@@ -32,6 +32,7 @@ if (typeof VMM != 'undefined') {
             wikipedia: "Iz Vikipedije, slobodne enciklopedije",
             loading_content: "Sadržaj se učitava",
             loading: "Učitava se",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

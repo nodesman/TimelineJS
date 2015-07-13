@@ -1,6 +1,6 @@
 /* English LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "ga",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["Eanair", "Feabhra", "Márta", "Aibhreán", "Bealtaine", "Meitheamh", "Iúil", "Lúnasa", "Meán Fómhair", "Deireadh Fómhair", "Samhain", "Mí Na Nollag"],
             month_abbr: ["Ean.", "Fea.", "Már.", "Aibh.", "Beal.", "Meith.", "Iúil", "Lún.", "MF.", "DF.", "Samh.", "Noll."],
-            day: ["Dé Domhnaigh","Dé Luain", "Dé Máirt", "Dé Céadaoin", "Déardaoin", "Dé hAoine", "Dé Sathairn"],
-            day_abbr: ["DéDom.","DéL.", "DéM.", "DéC.", "DéarD.", "DéhA.", "DéSat."]
+            day: ["Dé Domhnaigh", "Dé Luain", "Dé Máirt", "Dé Céadaoin", "Déardaoin", "Dé hAoine", "Dé Sathairn"],
+            day_abbr: ["DéDom.", "DéL.", "DéM.", "DéC.", "DéarD.", "DéhA.", "DéSat."]
         },
         dateformats: {
             year: "yyyy",

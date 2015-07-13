@@ -1,6 +1,6 @@
 /* Taiwanese LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "zh-tw",
         api: {

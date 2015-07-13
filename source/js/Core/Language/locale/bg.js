@@ -1,6 +1,6 @@
 /* Bulgarian LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "bg",
         api: {
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "От Уикипедия, свободната енциклопедия",
             loading_content: "Съдържанието се зарежда",
             loading: "Зарежда се",
-            swipe_nav: "Сменяйте с плъзгане настрани"		}
+            swipe_nav: "Сменяйте с плъзгане настрани"
+        }
     }
 }

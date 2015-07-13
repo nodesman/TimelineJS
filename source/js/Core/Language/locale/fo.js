@@ -1,6 +1,6 @@
 /* Faroese LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "fo",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["januar", "februar", "mars", "aprÌl", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"],
             month_abbr: ["jan.", "febr.", "mars", "aprÌl", "mai", "juni", "juli", "aug.", "sept.", "okt.", "nov.", "des."],
-            day: ["sunnudagur","m·nadagur", "t˝sdagur", "mikudagur", "hÛsdagur", "frÌggjadagur", "leygardagur"],
-            day_abbr: ["sun.","m·n.", "t˝s.", "mik.", "hÛs.", "frÌ.", "ley."]
+            day: ["sunnudagur", "m·nadagur", "t˝sdagur", "mikudagur", "hÛsdagur", "frÌggjadagur", "leygardagur"],
+            day_abbr: ["sun.", "m·n.", "t˝s.", "mik.", "hÛs.", "frÌ.", "ley."]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Fr· Wikipedia",
             loading_content: "Lesur inn tilfar",
             loading: "Lesur inn",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

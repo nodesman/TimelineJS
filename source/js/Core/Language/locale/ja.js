@@ -1,6 +1,6 @@
 /* Japanese LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "ja",
         api: {

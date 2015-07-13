@@ -32,6 +32,7 @@ if (typeof VMM != 'undefined') {
             wikipedia: "Vir Wikipedija",
             loading_content: "Nalaganje vsebine",
             loading: "Nalaganje",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

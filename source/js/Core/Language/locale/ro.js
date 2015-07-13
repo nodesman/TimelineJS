@@ -1,6 +1,6 @@
 /* Romanian LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "ro",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"],
             month_abbr: ["Ian.", "Feb.", "Mar.", "Apr.", "Mai", "Iun.", "Iul.", "Aug.", "Sep.", "Oct.", "Noi.", "Dec."],
-            day: ["Duminică","Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă"],
-            day_abbr: ["Dum.","Luni", "Mar.", "Mie.", "Joi", "Vin.", "Sâm."]
+            day: ["Duminică", "Luni", "Marți", "Miercuri", "Joi", "Vineri", "Sâmbătă"],
+            day_abbr: ["Dum.", "Luni", "Mar.", "Mie.", "Joi", "Vin.", "Sâm."]
         },
         dateformats: {
             year: "yyyy",

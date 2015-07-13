@@ -13,42 +13,46 @@ var embed_analytics = "UA-537357-20";
 //var embed_path = "http://embed.verite.co/timeline/";
 /* LOAD TIMER
 ================================================== */
-var load_time_start = new Date().getTime(), the_load_time = 0;
+var load_time_start = new Date().getTime(),
+    the_load_time = 0;
 /* GOOGLE ANALYTICS
 ================================================== */
 var _gaq = _gaq || [];
 (function() {
-    var ga = document.createElement('script'), s = document.getElementsByTagName('script')[0];
+    var ga = document.createElement('script'),
+        s = document.getElementsByTagName('script')[0];
     ga.type = 'text/javascript';
     ga.async = true;
     if ('https:' != document.location.protocol) { // analytics in https embeds problematic for IE 9/10/some Android
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         s.parentNode.insertBefore(ga, s);
-                _gaq.push(['_setAccount', embed_analytics]);
+        _gaq.push(['_setAccount', embed_analytics]);
         _gaq.push(['_trackPageview']);
     }
-    })();
+})();
 /* TIMELINE CDN SPECIFIC
 ================================================== */
 var getUrlVars = function() {
-    var varobj = {}, url_vars = [], uv ;
-            //url_vars = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    var varobj = {},
+        url_vars = [],
+        uv;
+    //url_vars = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
     url_vars = window.location.href.slice(window.location.href.indexOf('?') + 1);
-        if (url_vars.match('#')) {
+    if (url_vars.match('#')) {
         url_vars = url_vars.split('#')[0];
     }
     url_vars = url_vars.split('&');
-            for(var i = 0; i < url_vars.length; i++) {
+    for (var i = 0; i < url_vars.length; i++) {
         uv = url_vars[i].split('=');
         varobj[uv[0]] = uv[1];
     }
-            return varobj;
+    return varobj;
 };
 var onHeadline = function(e, headline) {
     var the_page_title = "/" + headline,
-        the_page_url	=	location.href;
-        document.title = headline;
-    the_load_time = Math.floor((new Date().getTime() - load_time_start)/100)/10;
+        the_page_url = location.href;
+    document.title = headline;
+    the_load_time = Math.floor((new Date().getTime() - load_time_start) / 100) / 10;
     _gaq.push(['_trackEvent', 'Timeline', headline, the_page_url, the_load_time]);
-    };
+};
 var url_config = getUrlVars();

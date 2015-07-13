@@ -1,6 +1,6 @@
 /* Estonian LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "et",
         api: {
@@ -9,8 +9,8 @@ if(typeof VMM != 'undefined') {
         date: {
             month: ["jaanuar", "veebruar", "märts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember"],
             month_abbr: ["jaan.", "veebr.", "märts", "apr.", "mai", "juuni", "juuli", "aug.", "sept.", "okt.", "nov.", "dets."],
-            day: ["pühapäev","esmaspäev", "teisipäev", "kolmapäev", "neljapäev", "reede", "laupäev"],
-            day_abbr: ["P","E", "T", "K", "N", "R", "L"]
+            day: ["pühapäev", "esmaspäev", "teisipäev", "kolmapäev", "neljapäev", "reede", "laupäev"],
+            day_abbr: ["P", "E", "T", "K", "N", "R", "L"]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Wikipedia, vaba entsüklopeedia",
             loading_content: "Laadib sisu",
             loading: "Laadib",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }

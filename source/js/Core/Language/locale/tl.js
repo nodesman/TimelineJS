@@ -1,6 +1,6 @@
 /* Tagalog LANGUAGE
 ================================================== */
-if(typeof VMM != 'undefined') {
+if (typeof VMM != 'undefined') {
     VMM.Language = {
         lang: "tl",
         api: {
@@ -10,7 +10,7 @@ if(typeof VMM != 'undefined') {
             month: ["Enemo", "Pebrero", "Marso", "Abril", "Mayo", "Hunyo", "Hulyo", "Agosto", "Setyembre", "Oktubre", "Nobyembre", "Disyembre"],
             month_abbr: ["Ene.", "Peb.", "Mar.", "Abr.", "Mayo", "Hun.", "Hul.", "Ago.", "Set.", "Okt.", "Nob.", "Dis."],
             day: ["Linggo", "Lunes", "Martes", "Miyerkules", "Huwebes", "Biyernes", "Sabado"],
-            day_abbr: ["Li.","L.", "M.", "Mi.", "H.", "B.", "S."]
+            day_abbr: ["Li.", "L.", "M.", "Mi.", "H.", "B.", "S."]
         },
         dateformats: {
             year: "yyyy",
@@ -32,6 +32,7 @@ if(typeof VMM != 'undefined') {
             wikipedia: "Mula sa Wikipedia, ang malayang ensiklopedya",
             loading_content: "Loading Content",
             loading: "Loading",
-            swipe_nav: "Swipe to Navigate"		}
+            swipe_nav: "Swipe to Navigate"
+        }
     }
 }
