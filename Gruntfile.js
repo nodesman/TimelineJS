@@ -28,13 +28,10 @@ module.exports = function (grunt) {
                 boss: true
             },
             sources: {
-                src: ['source/**/*.js', ]
+                src: ['source/**/*.js' ]
             }
         },
         concat: {
-            options: {
-                verbose: true
-            },
             dev: {
                 src: [
                     'source/js/Core/Core/VMM.js',
@@ -62,7 +59,7 @@ module.exports = function (grunt) {
                     'source/js/VMM.Timeline.TimeNav.js',
                     'source/js/VMM.Timeline.DataObj.js'
                 ],
-                dest: 'build/js/timeline2.js'
+                dest: 'build/js/timeline.js'
             }
         }
     });
